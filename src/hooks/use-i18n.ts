@@ -11,5 +11,10 @@ export function useI18n() {
     throw new Error("useI18n must be used within an I18nProvider")
   }
 
-  return context
+  return {
+    locale: context.locale,
+    setLocale: context.setLocale,
+    t: context.t,
+    isLoading: context.isLoading
+  }
 }

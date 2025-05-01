@@ -14,16 +14,38 @@ import LanguageSwitcher from "@/components/app/language-switcher"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function Home() {
-  const { t } = useI18n()
-  const [mounted, setMounted] = useState(false)
+  const { t, isLoading } = useI18n()
+  const [isMounted, setIsMounted] = useState(false)
 
-  // Evita problemas de hidratação
   useEffect(() => {
-    setMounted(true)
+    setIsMounted(true)
   }, [])
 
-  if (!mounted) {
-    return null
+  // Durante SSR ou antes da hidratação, retorne um esqueleto da página
+  if (!isMounted) {
+    return (
+      <div className="flex min-h-screen flex-col items-center bg-gradient-to-b from-blue-900 to-blue-950 p-4">
+        <div className="w-full max-w-md rounded-3xl bg-white p-2 shadow-lg">
+          <div className="animate-pulse">
+            <div className="h-8 w-24 bg-gray-200 rounded mb-4 ml-auto"></div>
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-24 rounded-full bg-gray-200 mb-4"></div>
+              <div className="h-6 w-48 bg-gray-200 rounded mb-2"></div>
+              <div className="h-4 w-32 bg-gray-200 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Durante o carregamento das traduções
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-900 to-blue-950">
+        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-white"></div>
+      </div>
+    )
   }
 
   return (

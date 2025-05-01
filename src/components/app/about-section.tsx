@@ -1,18 +1,50 @@
 "use client"
 
 import { useI18n } from "@/hooks/use-i18n"
-
+import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 
-export default function AboutSection() {
-  const { t, locale }: any = useI18n();
+function YouTubeEmbed({ videoId, title }: { videoId: string; title: string }) {
+  return (
+    <div className="relative w-full pt-[56.25%]">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
+        title={title}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  )
+}
 
-  // Vídeos diferentes para cada idioma
+export default function AboutSection() {
+  const { t, locale }: any = useI18n()
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  // IDs dos vídeos do YouTube para cada idioma
   const videos = {
-    pt: "/placeholder.svg?height=400&width=600", // Placeholder para vídeo em português
-    en: "/placeholder.svg?height=400&width=600", // Placeholder para vídeo em inglês
-    fr: "/placeholder.svg?height=400&width=600", // Placeholder para vídeo em francês
+    pt: {
+      id: "DGG6H8iGNbA",
+      title: "Apresentação em Português"
+    },
+    en: {
+      id: "LrjlW00kkws",
+      title: "English Presentation"
+    },
+    fr: {
+      id: "TCgKyI8ItTo",
+      title: "Présentation en Français"
+    }
   }
+
+  // Seleciona o vídeo baseado no idioma atual
+  const currentVideo = videos[locale as keyof typeof videos] || videos.pt
 
   return (
     <div className="space-y-4">
@@ -23,17 +55,15 @@ export default function AboutSection() {
       </div>
 
       <Card className="overflow-hidden border-blue-100">
-        <div className="aspect-video w-full bg-gray-100 flex items-center justify-center">
-          {/* Aqui você pode substituir por um vídeo real */}
-          <video
-            src={locale === "en" ? videos.en : locale === "fr" ? videos.fr : videos.pt}
-            controls
-            poster="/placeholder.svg?height=400&width=600"
-            className="w-full h-full object-cover"
-          >
-            {t("about.videoNotSupported")}
-          </video>
-        </div>
+        {!isClient ? (
+          // Placeholder durante SSR
+          <div className="aspect-video w-full bg-gray-100 animate-pulse" />
+        ) : (
+          <YouTubeEmbed
+            videoId={currentVideo.id}
+            title={currentVideo.title}
+          />
+        )}
       </Card>
     </div>
   )

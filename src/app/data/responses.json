@@ -1,0 +1,7 @@
+{
+  "server_error": "Desculpe, ocorreu um erro no servidor. Por favor, tente novamente mais tarde.",
+  "invalid_request": "Requisição inválida. Por favor, verifique os parâmetros enviados.",
+  "api_error": "Erro ao se comunicar com o serviço de IA. Por favor, tente novamente mais tarde.",
+  "missing_parameters": "Parâmetros obrigatórios não fornecidos.",
+  "language_not_supported": "Idioma não suportado. Por favor, use 'pt', 'en' ou 'fr'."
+} 
