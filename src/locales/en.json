@@ -2,7 +2,7 @@
     "tabs": {
       "about": "About",
       "experience": "Experience",
-      "skills": "Skills"
+      "projects": "Projects"
     },
     "profile": {
       "greeting": "Hello, I'm",
@@ -48,6 +48,24 @@
       },
       "previous": "Previous",
       "next": "Next"
+    },
+    "projects": {
+      "title": "Projects",
+      "empty": "No projects found",
+      "categories": {
+        "web": "Web",
+        "desktop": "Desktop",
+        "automation": "Automation",
+        "mobile": "Mobile"
+      },
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "description": "Personal website built with Next.js, TypeScript and Tailwind CSS, showcasing professional experience, projects and skills."
+      },
+      "automation": {
+        "title": "Process Automation",
+        "description": "Web automation system for repetitive processes, developed with Python and Selenium."
+      }
     },
     "skills": {
       "title": "Skills",
