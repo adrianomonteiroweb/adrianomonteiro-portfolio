@@ -25,13 +25,15 @@
           "company": "Solfy Tech",
           "role": "Desenvolvedor de software júnior",
           "period": "Janeiro de 2024 - Presente",
-          "description": "Desenvolvimento de automação web (RPA), suporte ao cliente e desenvolvimento de sites, sistemas e apps com stack em javascript, typescript e node.js."
+          "description": "Desenvolvimento de automação web (RPA), suporte ao cliente e desenvolvimento de sites, sistemas e apps com stack em javascript, typescript e node.js.",
+          "work_model": "Híbrido"
         },
         "solfy2": {
           "company": "Solfy Tech",
           "role": "Trainee de engenharia de software",
           "period": "Julho de 2023 - Janeiro de 2024",
-          "description": "Fortaleza, Ceará, Brasil"
+          "description": "Fortaleza, Ceará, Brasil",
+          "work_model": "Híbrido"
         },
         "mentor": {
           "company": "Adriano Monteiro Dev",
