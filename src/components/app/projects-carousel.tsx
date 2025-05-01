@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
+
 import { ChevronLeft, ChevronRight, Github, ExternalLink, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
@@ -70,7 +71,7 @@ export default function ProjectsCarousel() {
   return (
     <div className="relative">
       <div ref={carouselRef} className="flex overflow-x-hidden scroll-smooth" style={{ scrollSnapType: "x mandatory" }}>
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <Card
             key={project.id}
             className="min-w-[90%] flex-shrink-0 mr-[10%] scroll-snap-align-start"

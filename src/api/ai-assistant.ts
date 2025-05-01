@@ -46,14 +46,11 @@ export async function POST(request: Request) {
     const { message, language } = await request.json()
 
     // Determinar o idioma para o prompt
-    let promptLanguage = "português"
     let responseLanguage = "português"
 
     if (language === "en") {
-      promptLanguage = "English"
       responseLanguage = "English"
     } else if (language === "fr") {
-      promptLanguage = "French"
       responseLanguage = "French"
     }
 
