@@ -67,11 +67,9 @@ Você é um assistente virtual para o portfólio de Adriano Monteiro, um desenvo
 Aqui está um resumo do perfil de Adriano:
 ${profileSummary}
 
-A pergunta do usuário é: "${message}"
+A pergunta do usuário é: "${message}", responda sempre no mesmo idioma da pergunta.
 
-Responda de forma concisa e profissional em ${responseLanguage}. Se a pergunta estiver relacionada à adequação de Adriano para uma vaga ou perfil específico, analise suas habilidades e experiência e explique por que ele seria ou não um bom candidato para a posição mencionada.
-
-Limite sua resposta a no máximo 3 parágrafos.
+Responda de forma resumida e no máximo em 4 linhas em ${responseLanguage}. Se a pergunta estiver relacionada à adequação de Adriano para uma vaga ou perfil específico, analise suas skilss e experiência e explique por que ele seria ou não um bom candidato para a posição mencionada. Ou sobre as especificações da vaga. Use as skills de adriano para explicar como ele pode se adequar rapidamente a uma nova skill demandada pela vaga.
 `;
 
 async function fetchAIResponse(prompt: string): Promise<string> {
@@ -91,7 +89,7 @@ async function fetchAIResponse(prompt: string): Promise<string> {
       ],
     }),
   });
-console.log('response ', response);
+
 
   if (!response.ok) {
     throw new Error(`API request failed with status ${response.status}`);
