@@ -6,7 +6,7 @@
     },
     "profile": {
       "greeting": "Bonjour, je suis",
-      "name": "Adriano Monteiro",
+      "name": "Adrian Monteiro",
       "title": "Développeur de Logiciels Junior",
       "location": "Fortaleza, Ceará, Brésil",
       "downloadCV": "Télécharger CV",
@@ -34,7 +34,7 @@
           "description": "Fortaleza, Ceará, Brésil"
         },
         "mentor": {
-          "company": "Adriano Monteiro Dev",
+          "company": "Adrian Monteiro Dev",
           "role": "Mentor de Programmation",
           "period": "Mars 2022 - Juin 2023",
           "description": "Mentorat personnel ou en groupe en développement web de base avec JavaScript, React.js et Node.js."
@@ -80,7 +80,7 @@
     },
     "ai": {
       "title": "Assistant Virtuel",
-      "welcome": "Bonjour! Je suis l'assistant virtuel d'Adriano Monteiro. Comment puis-je vous aider avec des informations sur sa carrière ou vérifier s'il convient au poste que vous recherchez?",
+      "welcome": "Bonjour! Je suis l'assistant virtuel d'Adrian Monteiro. Où souhaitez-vous commencer?",
       "thinking": "Réflexion en cours...",
       "error": "Désolé, une erreur s'est produite lors du traitement de votre message. Veuillez réessayer.",
       "placeholder": "Posez des questions sur ma carrière ou mon adéquation au poste...",

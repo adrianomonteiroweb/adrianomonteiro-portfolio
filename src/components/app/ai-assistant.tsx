@@ -1,12 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Send } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
 
 import { useI18n } from "@/hooks/use-i18n"
 
@@ -22,20 +24,34 @@ export default function AiAssistant() {
   const [messages, setMessages] = useState<Message[]>([{ id: 1, content: t("ai.welcome"), isUser: false }])
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  const viewportRef = useRef<HTMLDivElement>(null)
+
+  // Auto-scroll to bottom when messages change
+  useEffect(() => {
+    if (viewportRef.current) {
+      const viewport = viewportRef.current
+      viewport.scrollTo({
+        top: viewport.scrollHeight,
+        behavior: "smooth"
+      })
+    }
+  }, [messages])
 
   const handleSendMessage = async () => {
     if (!input.trim() || isLoading) return
 
-    // Adiciona a mensagem do usuário
+    const trimmedInput = input.trim()
+
+    // Add user message
     const userMessage: Message = {
       id: messages.length + 1,
-      content: input,
+      content: trimmedInput,
       isUser: true,
     }
 
     setMessages((prev) => [...prev, userMessage])
 
-    // Adiciona mensagem de carregamento
+    // Add loading message
     const loadingMessage: Message = {
       id: messages.length + 2,
       content: t("ai.thinking"),
@@ -54,18 +70,18 @@ export default function AiAssistant() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          message: input,
+          message: trimmedInput,
           language: locale,
         }),
       })
 
       if (!response.ok) {
-        throw new Error("Falha ao obter resposta do assistente")
+        throw new Error("Failed to get assistant response")
       }
 
       const data = await response.json()
 
-      // Remove a mensagem de carregamento e adiciona a resposta real
+      // Remove loading message and add real response
       setMessages((prev) =>
         prev
           .filter((msg) => !msg.isLoading)
@@ -76,7 +92,7 @@ export default function AiAssistant() {
           }),
       )
     } catch (error) {
-      // Em caso de erro, substitui a mensagem de carregamento por uma mensagem de erro
+      // Replace loading message with error message
       setMessages((prev) =>
         prev
           .filter((msg) => !msg.isLoading)
@@ -86,7 +102,7 @@ export default function AiAssistant() {
             isUser: false,
           }),
       )
-      console.error("Erro ao chamar a API:", error)
+      console.error("Error calling API:", error)
     } finally {
       setIsLoading(false)
     }
@@ -98,45 +114,65 @@ export default function AiAssistant() {
         <CardTitle className="text-base text-blue-900">{t("ai.title")}</CardTitle>
       </CardHeader>
       <CardContent className="p-3 pt-0">
-        <ScrollArea className="h-[180px] pr-4">
-          <div className="flex flex-col gap-3">
-            {messages.map((message) => (
-              <div
-                key={message.id}
-                className={`rounded-lg p-3 text-xs ${
-                  message.isUser ? "ml-auto bg-blue-800 text-white" : "mr-auto bg-blue-50 text-gray-800"
-                } ${message.isLoading ? "animate-pulse" : ""} max-w-[80%]`}
-              >
-                {message.content}
-              </div>
-            ))}
-          </div>
+        <ScrollArea className="h-[280px]">
+          <ScrollAreaPrimitive.Viewport ref={viewportRef} className="h-full w-full pr-4">
+            <div className="flex flex-col gap-4">
+              {messages.map((message) => (
+                <div
+                  key={message.id}
+                  className={`group flex ${message.isUser ? "justify-end" : "justify-start"}`}
+                >
+                  <div
+                    className={cn(
+                      "rounded-lg p-3 text-sm transition-all duration-200",
+                      "max-w-[85%] break-words",
+                      message.isUser
+                        ? "bg-blue-800 text-white"
+                        : "bg-blue-50 text-gray-800",
+                      message.isLoading && "animate-pulse",
+                      "opacity-100"
+                    )}
+                    style={{
+                      wordBreak: "break-word",
+                      whiteSpace: "pre-wrap"
+                    }}
+                  >
+                    {message.content}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </ScrollAreaPrimitive.Viewport>
         </ScrollArea>
       </CardContent>
       <CardFooter className="p-3 pt-0">
-        <div className="flex w-full gap-2">
+        <form 
+          onSubmit={(e) => {
+            e.preventDefault()
+            handleSendMessage()
+          }}
+          className="flex w-full gap-2"
+        >
           <Input
             placeholder={t("ai.placeholder")}
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                handleSendMessage()
-              }
-            }}
             disabled={isLoading}
             className="text-sm border-blue-200 focus-visible:ring-blue-500"
           />
           <Button
+            type="submit"
             size="icon"
-            onClick={handleSendMessage}
-            disabled={isLoading}
-            className="bg-blue-800 hover:bg-blue-700"
+            disabled={isLoading || !input.trim()}
+            className={cn(
+              "bg-blue-800 hover:bg-blue-700 transition-all duration-200",
+              "disabled:opacity-50 disabled:cursor-not-allowed"
+            )}
           >
             <Send className="h-4 w-4" />
             <span className="sr-only">{t("ai.send")}</span>
           </Button>
-        </div>
+        </form>
       </CardFooter>
     </Card>
   )

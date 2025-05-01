@@ -6,16 +6,16 @@
     },
     "profile": {
       "greeting": "Hello, I'm",
-      "name": "Adriano Monteiro",
-      "title": "Junior Software Developer",
+      "name": "Adrian Monteiro",
+      "title": "Junior Full Stack Software Developer",
       "location": "Fortaleza, Ceará, Brazil",
       "downloadCV": "Download CV",
       "contact": "Contact"
     },
     "about": {
       "title": "About Me",
-      "description1": "Over 3 years of experience working in startups as a trainee, freelancer, programming mentor, and currently as a junior programmer specializing in web task automation (RPA). I have also worked on developing websites, systems, and applications, as well as providing technical support to clients and participating in project meetings.",
-      "description2": "I collaborate with teams through quick learning, assertive communication, and great dedication.",
+      "description1": "Over 3 years of experience with web automation (RPA), web development, desktop and mobile.",
+      "description2": "Watch my presentation video below:",
       "videoNotSupported": "Your browser does not support video playback."
     },
     "experience": {
@@ -34,7 +34,7 @@
           "description": "Fortaleza, Ceará, Brazil"
         },
         "mentor": {
-          "company": "Adriano Monteiro Dev",
+          "company": "Adrian Monteiro Dev",
           "role": "Programming Mentor",
           "period": "March 2022 - June 2023",
           "description": "Personal or group mentoring in basic web development with JavaScript, React.js, and Node.js."
@@ -80,7 +80,7 @@
     },
     "ai": {
       "title": "Virtual Assistant",
-      "welcome": "Hello! I'm Adriano Monteiro's virtual assistant. How can I help with information about his career or check if he's a good fit for the position you're looking for?",
+      "welcome": "Hello! I'm Adrian Monteiro's virtual assistant. What would you like to know about him?",
       "thinking": "Thinking...",
       "error": "Sorry, an error occurred while processing your message. Please try again.",
       "placeholder": "Ask about my career or job fit...",

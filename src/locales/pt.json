@@ -14,8 +14,8 @@
     },
     "about": {
       "title": "Sobre Mim",
-      "description1": "Mais de 3 anos de experiência atuando em startups como trainee, freelancer, mentor de programação e, atualmente, como programador júnior especializado em automações de tarefas na web. Também atuei no desenvolvimento de sites, sistemas e aplicativos, além de oferecer suporte técnico ao cliente e participar de reuniões de projeto.",
-      "description2": "Colaboro com equipes por meio de aprendizado rápido, comunicação assertiva e grande dedicação.",
+      "description1": "Mais de 3 anos de experiência com automações web (RPA), desenvolvimento web, desktop e mobile.",
+      "description2": "Assista meu vídeo de apresentação abaixo:",
       "videoNotSupported": "Seu navegador não suporta a reprodução de vídeos."
     },
     "experience": {
@@ -80,7 +80,7 @@
     },
     "ai": {
       "title": "Assistente Virtual",
-      "welcome": "Olá! Sou o assistente virtual de Adriano Monteiro. Como posso ajudar com informações sobre a carreira dele ou verificar se ele é adequado para a vaga que você procura?",
+      "welcome": "Olá! Sou o assistente virtual de Adriano Monteiro. O que gostaria de saber sobre ele?",
       "thinking": "Pensando...",
       "error": "Desculpe, ocorreu um erro ao processar sua mensagem. Por favor, tente novamente.",
       "placeholder": "Pergunte sobre minha carreira ou adequação para vagas...",
