@@ -1,0 +1,90 @@
+{
+    "tabs": {
+      "about": "À propos",
+      "experience": "Expérience",
+      "skills": "Compétences"
+    },
+    "profile": {
+      "greeting": "Bonjour, je suis",
+      "name": "Adriano Monteiro",
+      "title": "Développeur de Logiciels Junior",
+      "location": "Fortaleza, Ceará, Brésil",
+      "downloadCV": "Télécharger CV",
+      "contact": "Contact"
+    },
+    "about": {
+      "title": "À propos de moi",
+      "description1": "Plus de 3 ans d'expérience dans des startups en tant que stagiaire, freelance, mentor de programmation et, actuellement, en tant que programmeur junior spécialisé dans l'automatisation des tâches web (RPA). J'ai également travaillé sur le développement de sites web, de systèmes et d'applications, ainsi que sur le support technique aux clients et la participation à des réunions de projet.",
+      "description2": "Je collabore avec des équipes grâce à un apprentissage rapide, une communication assertive et un grand dévouement.",
+      "videoNotSupported": "Votre navigateur ne prend pas en charge la lecture vidéo."
+    },
+    "experience": {
+      "title": "Expérience Professionnelle",
+      "companies": {
+        "solfy1": {
+          "company": "Solfy Tech",
+          "role": "Développeur de Logiciels Junior",
+          "period": "Janvier 2024 - Présent",
+          "description": "Développement d'automatisation web (RPA), support client et développement de sites web, systèmes et applications avec JavaScript, TypeScript et Node.js."
+        },
+        "solfy2": {
+          "company": "Solfy Tech",
+          "role": "Stagiaire en Ingénierie Logicielle",
+          "period": "Juillet 2023 - Janvier 2024",
+          "description": "Fortaleza, Ceará, Brésil"
+        },
+        "mentor": {
+          "company": "Adriano Monteiro Dev",
+          "role": "Mentor de Programmation",
+          "period": "Mars 2022 - Juin 2023",
+          "description": "Mentorat personnel ou en groupe en développement web de base avec JavaScript, React.js et Node.js."
+        },
+        "youfy": {
+          "company": "Youfy",
+          "role": "Stagiaire en Ingénierie Logicielle",
+          "period": "Mars 2022 - Mai 2022",
+          "description": "Collaboration au développement d'automatisation de processus web avec JavaScript orienté objet et Node.js. Participation également à des réunions avec des clients, à la définition de projets, etc."
+        }
+      },
+      "previous": "Précédent",
+      "next": "Suivant"
+    },
+    "skills": {
+      "title": "Compétences",
+      "categories": {
+        "languages": "Langages de Programmation",
+        "web": "Développement Web",
+        "mobile": "Mobile & Bureau",
+        "database": "Base de Données & ORMs",
+        "tools": "Outils & DevOps",
+        "human_languages": "Langues"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "info": {
+        "title": "Informations de Contact",
+        "subtitle": "Contactez-moi pour des opportunités et collaborations",
+        "email": "adrianomonteiroweb@gmail.com",
+        "phone": "+55 (85) 98958-7554",
+        "address": "Rue Leon Gradvol, 309 - Maraponga",
+        "city": "Fortaleza, Ceará, Brésil"
+      },
+      "social": {
+        "title": "Réseaux Sociaux",
+        "subtitle": "Retrouvez-moi sur les réseaux sociaux",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "website": "Site Web"
+      }
+    },
+    "ai": {
+      "title": "Assistant Virtuel",
+      "welcome": "Bonjour! Je suis l'assistant virtuel d'Adriano Monteiro. Comment puis-je vous aider avec des informations sur sa carrière ou vérifier s'il convient au poste que vous recherchez?",
+      "thinking": "Réflexion en cours...",
+      "error": "Désolé, une erreur s'est produite lors du traitement de votre message. Veuillez réessayer.",
+      "placeholder": "Posez des questions sur ma carrière ou mon adéquation au poste...",
+      "send": "Envoyer"
+    }
+  }
+  

@@ -1,0 +1,90 @@
+{
+    "tabs": {
+      "about": "Sobre",
+      "experience": "Experiência",
+      "skills": "Skills"
+    },
+    "profile": {
+      "greeting": "Olá, eu sou",
+      "name": "Adriano Monteiro",
+      "title": "Desenvolvedor de Software Júnior",
+      "location": "Fortaleza, Ceará, Brasil",
+      "downloadCV": "Download CV",
+      "contact": "Contato"
+    },
+    "about": {
+      "title": "Sobre Mim",
+      "description1": "Mais de 3 anos de experiência atuando em startups como trainee, freelancer, mentor de programação e, atualmente, como programador júnior especializado em automações de tarefas na web. Também atuei no desenvolvimento de sites, sistemas e aplicativos, além de oferecer suporte técnico ao cliente e participar de reuniões de projeto.",
+      "description2": "Colaboro com equipes por meio de aprendizado rápido, comunicação assertiva e grande dedicação.",
+      "videoNotSupported": "Seu navegador não suporta a reprodução de vídeos."
+    },
+    "experience": {
+      "title": "Experiência Profissional",
+      "companies": {
+        "solfy1": {
+          "company": "Solfy Tech",
+          "role": "Desenvolvedor de software júnior",
+          "period": "Janeiro de 2024 - Presente",
+          "description": "Desenvolvimento de automação web (RPA), suporte ao cliente e desenvolvimento de sites, sistemas e apps com stack em javascript, typescript e node.js."
+        },
+        "solfy2": {
+          "company": "Solfy Tech",
+          "role": "Trainee de engenharia de software",
+          "period": "Julho de 2023 - Janeiro de 2024",
+          "description": "Fortaleza, Ceará, Brasil"
+        },
+        "mentor": {
+          "company": "Adriano Monteiro Dev",
+          "role": "Mentor de Programação",
+          "period": "Março de 2022 - Junho de 2023",
+          "description": "Mentoria pessoal ou em grupo de desenvolvimento web básico em javascript, react.js e node.js."
+        },
+        "youfy": {
+          "company": "Youfy",
+          "role": "Trainee de engenharia de software",
+          "period": "Março de 2022 - Maio de 2022",
+          "description": "Colaborei no desenvolvimento de automações de processos web com javascript orientado a objetos e node.js. Além de atividades como reuniões com clientes, escopo de projeto e etc."
+        }
+      },
+      "previous": "Anterior",
+      "next": "Próximo"
+    },
+    "skills": {
+      "title": "Habilidades",
+      "categories": {
+        "languages": "Linguagens de Programação",
+        "web": "Desenvolvimento Web",
+        "mobile": "Mobile & Desktop",
+        "database": "Banco de Dados & ORMs",
+        "tools": "Ferramentas & DevOps",
+        "human_languages": "Idiomas"
+      }
+    },
+    "contact": {
+      "title": "Contato",
+      "info": {
+        "title": "Informações de Contato",
+        "subtitle": "Entre em contato para oportunidades e colaborações",
+        "email": "adrianomonteiroweb@gmail.com",
+        "phone": "(85) 98958-7554",
+        "address": "Rua Leon Gradvol, 309 - Maraponga",
+        "city": "Fortaleza, Ceará, Brasil"
+      },
+      "social": {
+        "title": "Redes Sociais",
+        "subtitle": "Me encontre nas redes sociais",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "website": "Website"
+      }
+    },
+    "ai": {
+      "title": "Assistente Virtual",
+      "welcome": "Olá! Sou o assistente virtual de Adriano Monteiro. Como posso ajudar com informações sobre a carreira dele ou verificar se ele é adequado para a vaga que você procura?",
+      "thinking": "Pensando...",
+      "error": "Desculpe, ocorreu um erro ao processar sua mensagem. Por favor, tente novamente.",
+      "placeholder": "Pergunte sobre minha carreira ou adequação para vagas...",
+      "send": "Enviar"
+    }
+  }
+  

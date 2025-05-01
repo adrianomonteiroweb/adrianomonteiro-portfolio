@@ -1,0 +1,90 @@
+{
+    "tabs": {
+      "about": "About",
+      "experience": "Experience",
+      "skills": "Skills"
+    },
+    "profile": {
+      "greeting": "Hello, I'm",
+      "name": "Adriano Monteiro",
+      "title": "Junior Software Developer",
+      "location": "Fortaleza, Ceará, Brazil",
+      "downloadCV": "Download CV",
+      "contact": "Contact"
+    },
+    "about": {
+      "title": "About Me",
+      "description1": "Over 3 years of experience working in startups as a trainee, freelancer, programming mentor, and currently as a junior programmer specializing in web task automation (RPA). I have also worked on developing websites, systems, and applications, as well as providing technical support to clients and participating in project meetings.",
+      "description2": "I collaborate with teams through quick learning, assertive communication, and great dedication.",
+      "videoNotSupported": "Your browser does not support video playback."
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "companies": {
+        "solfy1": {
+          "company": "Solfy Tech",
+          "role": "Junior Software Developer",
+          "period": "January 2024 - Present",
+          "description": "Development of web automation (RPA), customer support, and development of websites, systems, and apps with JavaScript, TypeScript, and Node.js stack."
+        },
+        "solfy2": {
+          "company": "Solfy Tech",
+          "role": "Software Engineering Trainee",
+          "period": "July 2023 - January 2024",
+          "description": "Fortaleza, Ceará, Brazil"
+        },
+        "mentor": {
+          "company": "Adriano Monteiro Dev",
+          "role": "Programming Mentor",
+          "period": "March 2022 - June 2023",
+          "description": "Personal or group mentoring in basic web development with JavaScript, React.js, and Node.js."
+        },
+        "youfy": {
+          "company": "Youfy",
+          "role": "Software Engineering Trainee",
+          "period": "March 2022 - May 2022",
+          "description": "Collaborated in the development of web process automation with object-oriented JavaScript and Node.js. Also participated in client meetings, project scoping, etc."
+        }
+      },
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "skills": {
+      "title": "Skills",
+      "categories": {
+        "languages": "Programming Languages",
+        "web": "Web Development",
+        "mobile": "Mobile & Desktop",
+        "database": "Database & ORMs",
+        "tools": "Tools & DevOps",
+        "human_languages": "Languages"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "info": {
+        "title": "Contact Information",
+        "subtitle": "Get in touch for opportunities and collaborations",
+        "email": "adrianomonteiroweb@gmail.com",
+        "phone": "+55 (85) 98958-7554",
+        "address": "Leon Gradvol Street, 309 - Maraponga",
+        "city": "Fortaleza, Ceará, Brazil"
+      },
+      "social": {
+        "title": "Social Media",
+        "subtitle": "Find me on social media",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "website": "Website"
+      }
+    },
+    "ai": {
+      "title": "Virtual Assistant",
+      "welcome": "Hello! I'm Adriano Monteiro's virtual assistant. How can I help with information about his career or check if he's a good fit for the position you're looking for?",
+      "thinking": "Thinking...",
+      "error": "Sorry, an error occurred while processing your message. Please try again.",
+      "placeholder": "Ask about my career or job fit...",
+      "send": "Send"
+    }
+  }
+  
